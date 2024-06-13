@@ -28,4 +28,14 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        let array = fruits.reduce(function(array, item) {
+            if(!array.includes(item)) {
+                array.push(item);
+            }
+            return array;
+        }, []);
+
+        console.log(array);
+    });
 })();
