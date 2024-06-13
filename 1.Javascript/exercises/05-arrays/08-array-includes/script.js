@@ -26,4 +26,11 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        fruits.forEach(element => {
+            if (element == "pomme") {
+            console.log("Il y a une pomme dans ce tableau");
+        }
+        });
+    });
 })();

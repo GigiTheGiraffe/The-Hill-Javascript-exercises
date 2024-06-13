@@ -89,4 +89,13 @@
     ];
 
     // your code here
+    function seeker(element, index) {
+        if (element.firstname == "Jean" && element.lastname == "Dupont") {
+            console.log(element.email);
+            console.log(index);
+        };
+    };
+    document.getElementById("run").addEventListener("click", function() {
+        people.forEach((element, index) => seeker(element, index));
+        });
 })();

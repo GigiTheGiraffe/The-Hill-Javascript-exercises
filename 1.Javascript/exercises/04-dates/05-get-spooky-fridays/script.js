@@ -11,5 +11,17 @@
 
 (() => {
     // your code here
-    let year = document.getElementById("year").value;
+    document.getElementById("run").addEventListener("click", function(){
+    let year = new Date(document.getElementById("year").value + 'january' + 13);
+    let option = {
+        month: "long",
+      };
+    for (let i = 0; i < 12; i++) {
+        year.setMonth(i);
+        if (year.getDay() == 5) {
+            let month = year.toLocaleString('fr-FR', option);
+            alert("Vendredi 13 en " + month);
+        }
+    }
+    });
 })();
