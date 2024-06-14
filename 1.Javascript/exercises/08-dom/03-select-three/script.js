@@ -11,4 +11,7 @@
 
 (() => {
     // your code here
+    for (let i = 0; i < document.querySelectorAll("p.target").length; i++) {
+        document.querySelectorAll("p.target")[i].innerHTML = "owned";
+    }
 })();

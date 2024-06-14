@@ -27,4 +27,19 @@
         user: null,
     };
     // your code here
+
+    document.getElementById("run").addEventListener("click", () => {
+        for(let i = 0; i < computers.length; i++) {
+            if (!(computers[i].available === false)) {
+                computers[i].available = true;
+            }
+            if (!computers[i].user) {
+                computers[i].user = null;
+            }
+            if (!computers[i].os) {
+                computers[i].os = "linux";
+            }
+        };
+        console.log(computers);
+    });
 })();

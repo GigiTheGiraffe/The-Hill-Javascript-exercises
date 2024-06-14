@@ -13,4 +13,9 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+    const merge = keys.map((key, index) => [key, values[index]]);
+    const obj = Object.fromEntries(merge);
+    console.log(obj);
+    });
 })();
